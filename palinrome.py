@@ -1,3 +1,10 @@
+'''A function to check whether a given object is palindrome or not'''
+def isPalindrome(x):
+    s=str(x)
+    for i in range(len(s)):
+        if s[i]!=s[len(s)-1-i]:
+            return False
+    return True
 """A function to collect all the palindrome sets present in the passed string"""
 def palindromeInString(s):
     result=[]    # an empty list to collect the result
