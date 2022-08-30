@@ -1,0 +1,29 @@
+#Function for generating different permutations of the string  
+
+def listToString(lst):
+    return ''.join(lst)
+
+def permutation(string,start,end):  
+    current = 0
+    #Prints the permutations  
+    if(start == end-1):  
+        print(string)  
+    else:   
+        for current in range(start,end):  
+  
+       #Swapping the string by fixing a character  
+            j = list(string)  
+            temp = j[start] 
+            j[start] = j[current]
+            j[current] = temp  
+  
+      #Recursively calling function generatePermutation() for rest of the characters  
+  
+            permutation(listToString(j),start+1,end)
+            #Swapping the string by fixing a character  
+            temp = j[start]
+            j[start] = j[current]  
+            j[current] = temp
+  
+str = "XYZ"   
+permutation(str,0,len(str))
