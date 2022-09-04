@@ -27,8 +27,7 @@ def mergeSort(array):
             j=j+1
             k=k+1
  
- 
-def printList(array):                # PRINT THE ARRAY  
+ def printList(array):                # PRINT THE ARRAY  
     for i in range(len(array)):
         print(array[i], end=" ")
     print()
