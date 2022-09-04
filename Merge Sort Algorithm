@@ -1,0 +1,42 @@
+def mergeSort(array):
+    
+    if len(array)>1:      #  MERGESORT FUNCTION 
+        mid = len(array)//2     # FIND THE MID DIVIDING BY 2
+        lefthalf = array[:mid]    
+        righthalf = array[mid:]
+
+        mergeSort(lefthalf)
+        mergeSort(righthalf)
+        i=j=k=0       
+        while i < len(lefthalf) and j < len(righthalf):    # COMPARING 
+            if lefthalf[i] < righthalf[j]:
+                array[k]=lefthalf[i]
+                i=i+1
+            else:
+                array[k]=righthalf[j] 
+                j=j+1
+            k=k+1
+
+        while i < len(lefthalf):
+            array[k]=lefthalf[i]
+            i=i+1
+            k=k+1
+
+        while j < len(righthalf):
+            array[k]=righthalf[j]
+            j=j+1
+            k=k+1
+ 
+ 
+def printList(array):                # PRINT THE ARRAY  
+    for i in range(len(array)):
+        print(array[i], end=" ")
+    print()
+
+if __name__ == '__main__':
+    array = [6, 5, 12, 10, 9, 1]
+
+    mergeSort(array)
+
+    print("Sorted array is: ")
+    printList(array)
