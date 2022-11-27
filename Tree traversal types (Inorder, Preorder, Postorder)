@@ -38,8 +38,7 @@ class treeTraversal(object):
             self.postorder(root.right)
             print(root.data, end=" ")
         return
-
-
+        
 # Driver code
 # Node c
 n1 = Node(3)
